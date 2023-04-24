@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 import json
 import sqlite3
 
+
 app = Flask(__name__)
 
 con = sqlite3.connect("mittaukset.db3")
@@ -28,7 +29,7 @@ paivat = [
 
 @app.route('/api', methods=['GET'])
 def index():
-    return render_template("mittaukset.html", taulukko=lampotilat, paivat=paivat)
+    return render_template("mittaukset.html")
 
 @app.route('/lisaa', methods=['POST'])
 def lisaa():

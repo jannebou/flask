@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5a3155f9-f647-425c-b399-8ef4fa57a01a/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/juna",
+    "appService.deploySubpath": "."
+}
