@@ -34,7 +34,7 @@ def on_message(client, userdata, msg):
             tiedosto['x'] = str(topic[2])
             tiedosto['y'] = str(aika)
             viesti = json.dumps(tiedosto)
-            vastaus = requests.post('http://localhost:5000/lisaa', data = viesti)
+            vastaus = requests.post('https://juna.azurewebsites.net/upload', data = viesti)
             client.publish('Delay', payload=str(aika), qos=0, retain=False)
             print(f"send {aika} to myöhässä ")			
             client.connect(digitraffic, 1883, 60)
